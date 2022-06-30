@@ -1,6 +1,16 @@
 # Two Pointers (투 포인터)
 
+### 알고리즘
+* 배열에서 원래 이중 for문으로 탐색하면  $O(N^2)$에 처리되는 작업을 2개 포인터(커서)의 움직임으로 $O(N)$에 해결하는 알고리즘
+* 시간복잡도를 줄일 수 있는 이유? -> 이중 for문에서는 i=0일 때 계산하면서 얻은 정보가 i=1일 때 전혀 쓰이지 않지만 투 포인터에서는 i=0에서 계산하면서 얻은 정보를 i=1일 때 활용한다.(그 정보가 포인터의 이동으로 나타난다.)
+* 1차원 배열에서 각자 다른 원소를 가리키고 있는 2개의 포인터를 조작해가며 원하는 것을 얻는 형태
+* 이전 반복에서 결과를 기억해 그 다음 반복문에서 불필요하게 탐색하는 작업을 방지한다.
 
+  :bulb: 투포인터는 이분탐색으로 해결할 수 있는 경우가 많다. (반대도 마찬가지)
+
+### 시간 복잡도
+* 정렬 : $O(NlogN)$
+* 두 포인터가 움직이는 최대 거리 = $2N = O(N)$
 
 ## 문제
 
@@ -44,4 +54,7 @@
 | 34 |                      | <a href="https://www.acmicpc.net/problem/1644" target="_blank">1644</a> | <a href="https://www.acmicpc.net/problem/1644" target="_blank">소수의 연속합</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |                      |
 | 35 |                      | <a href="https://www.acmicpc.net/problem/20181" target="_blank">20181</a> | <a href="https://www.acmicpc.net/problem/20181" target="_blank">꿈틀꿈틀 호석 애벌레 - 효율성</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> |                      |
 
-출처 : https://github.com/tony9402/baekjoon/blob/main/two_pointer/README.md
+### Reference 
+* 문제 : [tony9402](https://github.com/tony9402/baekjoon/blob/main/two_pointer/README.md)
+* [[실전알고리즘]0x14강-투포인터](https://blog.encrypted.gg/1004?category=773649)
+* [투 포인터(Two Pointers Algorithm), 슬라이딩 윈도우(Sliding Window)](https://m.blog.naver.com/kks227/220795165570)
