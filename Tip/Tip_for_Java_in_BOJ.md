@@ -59,6 +59,8 @@ public class Main {
       }
     }
     ```
+    * br.readLine()을 사용하면 한 라인을 읽어 string형으로 반환해준다.
+    * StringTokenizer의 default 구분자가 공백이다.
  6. 출력도 느린 System.out.println() 대신 BufferedWriter
  ```java
   BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -66,14 +68,19 @@ public class Main {
 
       for(int j = 0; j < s; j++){
         int data = Integer.parseInt(st.nextToken());
-        bw.write(String.valueOf(data));
+        bw.write(String.valueOf(data)); //또는 br.write(Integer.toString(data))
         bw.newLine();
         
    bw.flush();
+   
+   br.close();
+   bw.close();
 ```
-* int를 바로 출력할 수 없어서 String.valueOf를 써야 한다.(String의 + 연산은 느림)
-* 다른 방법으로는 StringBuilder로 출력할 것을 모아서 System.out.println() 사용
-
+   * stream을 사용할 떄는 close()를 해야 한다.
+   * BufferedWriter 주의할 점 : 버퍼 기반이기 떄문에 출력하려고 넣은 값이 버퍼 사이즈 보다 작으면 flush()를 해줘야 한다.
+   
+   * int를 바로 출력할 수 없어서 String.valueOf를 써야 한다.(String의 + 연산은 느림)
+   * 다른 방법으로는 StringBuilder로 출력할 것을 모아서 System.out.println() 사용
  ```java
   BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
   StringBuilder sb = new StringBuilder();
