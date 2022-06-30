@@ -4,6 +4,10 @@
 4. solution 함수로 래핑해서 사용하면 편리 
     * main 함수에서 바로 작성 시, main 함수가 static이므로 main에서 사용하는 전역 변수 및 모든 함수가 static이어야 한다.
 ```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Main {
    private int max = 0;
    private int n, k;
@@ -27,7 +31,7 @@ public class Main {
    }
  
    public void solution() throws Exception{
-     BufferdReader br = new BufferedReader(new InputStreamReader(System.in));
+     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
      StringTokenizer st = new StringTokenizer(br.readLine());
      n = Integer.parseInt(st.nextToken());
      k = Integer.parseInt(st.nextToken());
